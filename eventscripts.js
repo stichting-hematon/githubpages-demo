@@ -16,7 +16,7 @@ function redirect() {
         }, { once: true });
     } else {
         // Fallback: direct redirect
-        window.location.href = "main.html";
+        window.location.href = formurl;
     }
 }
 
@@ -35,4 +35,5 @@ goButton.addEventListener("click", () => {
     clearInterval(interval);
     redirect();
 });
+
 
