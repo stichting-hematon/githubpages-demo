@@ -4,30 +4,12 @@
     <title>Tussenpagina</title>
     <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5;url="https://forms.office.com/Pages/ResponsePage.aspx?id=cZoyhOXi-Uifid8K47hDBuJ5oMSX115JtVjuBC6Gzx9UOVNNVlc1V0c2UDJQRzRJRTRISlRNNkgwMSQlQCN0PWcu&eventkey=234">
+    <!-- 5 seconden wachten, daarna naar main.html -->
     
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="eventscripts.js"></script>
-    <script>
-        let seconds = 5;
-        const countdown = document.getElementById("countdown");
-        var formurl = "https://forms.office.com/Pages/ResponsePage.aspx?id=cZoyhOXi-Uifid8K47hDBuJ5oMSX115JtVjuBC6Gzx9UOVNNVlc1V0c2UDJQRzRJRTRISlRNNkgwMSQlQCN0PWcu&eventkey=234"
 
-        const interval = setInterval(() => {
-            seconds--;
-            countdown.textContent = seconds;
-            if (seconds <= 0) {
-                clearInterval(interval);
-                // Fade-out effect voordat redirect
-                const overlay = document.querySelector(".overlay");
-                overlay.style.transition = "opacity 1s";
-                overlay.style.opacity = 0;
-                setTimeout(() => {
-                    window.location.href = "https://forms.office.com/Pages/ResponsePage.aspx?id=cZoyhOXi-Uifid8K47hDBuJ5oMSX115JtVjuBC6Gzx9UOVNNVlc1V0c2UDJQRzRJRTRISlRNNkgwMSQlQCN0PWcu&eventkey=234";
-                }, 1000); // wacht 1s voor fade-out
-            }
-        }, 1000);
-    </script>
-  
 </head>
 <body>
     <div class="container">
