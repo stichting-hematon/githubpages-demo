@@ -17,11 +17,12 @@ function redirect() {
 
         // Wacht totdat fade-out klaar is
         overlay.addEventListener("transitionend", () => {
-            window.location.href = "main.html";
+            window.location.href = "https://forms.office.com/Pages/ResponsePage.aspx?id=cZoyhOXi-Uifid8K47hDBuJ5oMSX115JtVjuBC6Gzx9UOVNNVlc1V0c2UDJQRzRJRTRISlRNNkgwMSQlQCN0PWcu&eventkey=234"
+;
         }, { once: true });
     } else {
         // Als overlay niet gevonden wordt, direct redirecten
-        window.location.href = "main.html";
+        window.location.href = formurl;
     }
 }
 
@@ -40,5 +41,6 @@ goButton.addEventListener("click", () => {
     clearInterval(interval);
     redirect();
 });
+
 
 
