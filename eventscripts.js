@@ -1,11 +1,6 @@
 let seconds = 5;
 const countdown = document.getElementById("countdown");
-const overlay = document.querySelector(".overlay");
-const goButton = document.getElementById("goButton");const goButton = document.getElementById("goButton");
-goButton.addEventListener("click", () => {
-    clearInterval(interval);
-    redirect();
-});
+const goButton = document.getElementById("goButton");
 var formurl = "https://forms.office.com/Pages/ResponsePage.aspx?id=cZoyhOXi-Uifid8K47hDBuJ5oMSX115JtVjuBC6Gzx9UOVNNVlc1V0c2UDJQRzRJRTRISlRNNkgwMSQlQCN0PWcu&eventkey=234"
 
 function redirect() {
@@ -15,14 +10,13 @@ function redirect() {
         overlay.style.transition = "opacity 1s";
         overlay.style.opacity = 0;
 
-        // Wacht totdat fade-out klaar is
+        // Redirect zodra fade-out klaar is
         overlay.addEventListener("transitionend", () => {
-            window.location.href = "https://forms.office.com/Pages/ResponsePage.aspx?id=cZoyhOXi-Uifid8K47hDBuJ5oMSX115JtVjuBC6Gzx9UOVNNVlc1V0c2UDJQRzRJRTRISlRNNkgwMSQlQCN0PWcu&eventkey=234"
-;
+            window.location.href = "main.html";
         }, { once: true });
     } else {
-        // Als overlay niet gevonden wordt, direct redirecten
-        window.location.href = formurl;
+        // Fallback: direct redirect
+        window.location.href = "main.html";
     }
 }
 
@@ -41,6 +35,3 @@ goButton.addEventListener("click", () => {
     clearInterval(interval);
     redirect();
 });
-
-
-
