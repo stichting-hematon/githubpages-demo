@@ -5,11 +5,20 @@ const goButton = document.getElementById("goButton");
 var formurl = "https://forms.office.com/Pages/ResponsePage.aspx?id=cZoyhOXi-Uifid8K47hDBuJ5oMSX115JtVjuBC6Gzx9UOVNNVlc1V0c2UDJQRzRJRTRISlRNNkgwMSQlQCN0PWcu&eventkey=234"
 
 function redirect() {
-    overlay.style.transition = "opacity 1s";
-    overlay.style.opacity = 0;
-    setTimeout(() => {
-        window.location.href = "https://forms.office.com/Pages/ResponsePage.aspx?id=cZoyhOXi-Uifid8K47hDBuJ5oMSX115JtVjuBC6Gzx9UOVNNVlc1V0c2UDJQRzRJRTRISlRNNkgwMSQlQCN0PWcu&eventkey=234";
-    }, 1000); // wacht 1s voor fade-out
+    const overlay = document.querySelector(".overlay");
+    if (overlay) {
+        // Fade-out effect
+        overlay.style.transition = "opacity 1s";
+        overlay.style.opacity = 0;
+
+        // Wacht totdat fade-out klaar is
+        overlay.addEventListener("transitionend", () => {
+            window.location.href = "main.html";
+        }, { once: true });
+    } else {
+        // Als overlay niet gevonden wordt, direct redirecten
+        window.location.href = "main.html";
+    }
 }
 
 // Countdown automatisch
@@ -27,3 +36,4 @@ goButton.addEventListener("click", () => {
     clearInterval(interval);
     redirect();
 });
+
