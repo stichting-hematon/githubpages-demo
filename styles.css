@@ -1,5 +1,4 @@
 /* Algemene stijl */
-
 body, html {
     margin: 0;
     padding: 0;
@@ -8,7 +7,6 @@ body, html {
     font-family: Arial, sans-serif;
     background-color: #1a1a1a;
     color: #fff;
-    align: center;
 }
 
 /* Overlay container */
@@ -40,6 +38,7 @@ p {
     font-size: 1.2rem;
 }
 
+/* Knopstijl */
 button#goButton {
     margin-top: 20px;
     padding: 12px 24px;
@@ -55,5 +54,3 @@ button#goButton {
 button#goButton:hover {
     background-color: #e65c00;
 }
-
-
