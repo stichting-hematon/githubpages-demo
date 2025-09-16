@@ -12,7 +12,7 @@ function redirect() {
 
         // Redirect zodra fade-out klaar is
         overlay.addEventListener("transitionend", () => {
-            window.location.href = "main.html";
+            window.location.href = formurl;
         }, { once: true });
     } else {
         // Fallback: direct redirect
@@ -35,3 +35,4 @@ goButton.addEventListener("click", () => {
     clearInterval(interval);
     redirect();
 });
+
