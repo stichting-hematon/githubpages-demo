@@ -5,7 +5,7 @@ var formurl = "https://forms.office.com/Pages/ResponsePage.aspx?id=cZoyhOXi-Uifi
 
 function redirect() {
     // Direct doorsturen zonder fade
-    window.location.href = https://forms.office.com/Pages/ResponsePage.aspx?id=cZoyhOXi-Uifid8K47hDBuJ5oMSX115JtVjuBC6Gzx9UOVNNVlc1V0c2UDJQRzRJRTRISlRNNkgwMSQlQCN0PWcu&eventkey=234";
+    window.location.href = "https://forms.office.com/Pages/ResponsePage.aspx?id=cZoyhOXi-Uifid8K47hDBuJ5oMSX115JtVjuBC6Gzx9UOVNNVlc1V0c2UDJQRzRJRTRISlRNNkgwMSQlQCN0PWcu&eventkey=234";
 }
 
 // Countdown automatisch
@@ -23,3 +23,4 @@ goButton.addEventListener("click", () => {
     clearInterval(interval);
     redirect();
 });
+
